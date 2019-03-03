@@ -11,7 +11,9 @@ body{
     font-family: 'Quicksand', sans-serif;
     background: #ffffff url("../images/transbg.png");
     background-size: cover;
+    box-sizing: border-box;
 }
+
 
 .center {
   display: grid;
@@ -120,8 +122,34 @@ a.skip:focus{
 }
 
 .home-gallery {
-  width: 100%
+  width:100%;
 }
+
+.column_left {
+  width: 100%;
+}
+.column_right {
+  width: 100%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #333;
+}
+h2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #333;
+} 
 
 
 @media screen and (min-width:780px) {
@@ -140,6 +168,50 @@ a.skip:focus{
 		width: 50%;
   }
 
+  .column_right {
+    float: left;
+    width: 50%;
+    padding-left: 20px;
+  }
+  
+  .column_left {
+    float: left;
+    width: 40%;
+    padding: 0;
+  }
+
+  .ex_column_right {
+    float: left;
+    width: 60%;
+    padding-left: 40px;
+  }
+  
+  .ex_column_left {
+    float: left;
+    width: 28%;
+    padding: 0;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #333;
+  }
+
+  h2 {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #333;
+  } 
+ 
 }
 
 @media screen and (min-width:1200px) {
@@ -157,7 +229,49 @@ a.skip:focus{
     width: 25%;
   } 
 
+  .column_right {
+    float: left;
+    width: 50%;
+    padding-left: 20px;
+  }
+  
+  .column_left {
+    float: left;
+    width: 40%;
+    padding: 0;
+  }
 
+  .ex_column_right {
+    float: left;
+    width: 60%;
+    padding-left: 60px;
+  }
+  
+  .ex_column_left {
+    float: left;
+    width: 28%;
+    padding: 0;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  h1 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #333;
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #333;
+  } 
 }
 
 .text-box{
@@ -169,23 +283,12 @@ a.skip:focus{
   line-height:20px;
 }
 
-h1 {
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 24px;
-  color: #333;
-}
-
-h2 {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  color: #333;
-}
-
 .crop_img {
   object-fit: cover;
   width:25vw;
   height:25vh;
   
 }
+
+
+
