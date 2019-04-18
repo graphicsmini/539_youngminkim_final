@@ -567,7 +567,7 @@ input {
 
 
 .send {
-  width: 10%;
+  width: 20%;
   font-size: 16px;
   margin-left: 10.5%;
   margin-bottom: 20px;
@@ -582,7 +582,7 @@ input {
 }
 
 #video {
-  width: 800px;
+  width: 70%;
   align-content: center;
 }
 
