@@ -9,10 +9,109 @@
 body{
     background-color:#ffffff;
     font-family: 'Quicksand', sans-serif;
-    background: #ffffff url("../images/transbg.png");
+    background: #ffffff;
     background-size: cover;
     box-sizing: border-box;
 }
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  /* max-width: 1000px; */
+  position: relative;
+  margin: auto;
+}
+
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  /* font-weight: bold; */
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 10px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+/* Number text (1/5 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 10px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
 
 
 .center {
@@ -21,46 +120,46 @@ body{
   margin-right: auto;
   justify-items: center;
 }
-/*skip the contents*/
-a.skip{
-	padding:10px;
-	text-decoration: none;
-	position: relative;
-    top: -100px;
-    transition: top ease-in 1s;
+
+
+.skip-to-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  transform: translateY(-50px);
+  color: #333;
+  background-color: white;
+}
+.skip-to-main:focus {
+  transform: translateY(0);
 }
 
-a.skip:focus{
-	background: white;
-	top: -10px;
-	border: 1px solid black;
-}
 
-/* Add a black background color to the top navigation */
 .topnav {
-  background-color: #eee;
+  background-color: #7a42f4;
   overflow: hidden;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
-  color: #999;
+  color: #fff;
   text-align: center;
-  padding: 10px 12px;
+  padding: 14px 18px;
   text-decoration: none;
   font-size: 14px;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
-  color: #999;
+  background-color: #5a30b4;
+  color: #fff;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #75FC8E;
+  background-color: #5a30b4;
   color: white;
   font-weight:500;
 }
@@ -70,15 +169,16 @@ a.skip:focus{
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 780px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
   }
+
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 780px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -92,20 +192,89 @@ a.skip:focus{
   }
 }
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  left:0;
-  right:0;
-  width: 100%;
-  height: 30px;
-  background-color: #7a42f4;
-  color: #fff;
-  font-size: 12px;
+
+footer {
+  border-top: 1px solid #eee;
+  display: block;
+  padding: 50px;
+  margin-top: 30px;
+}
+
+.lite {
+  opacity: 0.3;
+}
+
+
+footer .content {
   text-align: center;
-  line-height: 16px;
-  padding-top: 4px;
-  padding-bottom: 8px;
+}
+
+footer .content .name {
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+footer .content .name::after {
+  content: '';
+  border-bottom: 3px solid black;
+  width: 30px;
+  margin: 20px auto;
+  display: block;
+}
+
+footer .content .email {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+footer .content .copyright {
+  font-size: 12px;
+  line-height: 24px;
+  color: #888;
+  font-style: italic;
+}
+
+.img-list {
+  display: block;
+}
+
+.img-list > * {
+  display: inline-block;
+}
+
+.img-list img {
+  width: 100px;
+}
+
+footer .img-list {
+  margin-top: 20px;
+}
+
+footer .img-list img {
+  margin: 0 10px;
+  width: 40px;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  background-color: white;
+  opacity: 0.8;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* margin-left: 10px; */
+}
+.text-block h1 {
+  font-size: 10px;
+  line-height: 20px;
+  color: #333;
+  
 }
 
 /* Use the flex for portfolio images*/
@@ -139,9 +308,9 @@ a.skip:focus{
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 30px;
   color: #333;
 }
 h2 {
@@ -153,9 +322,7 @@ h2 {
 
 
 @media screen and (min-width:780px) {
-	body{
 	
-	}
 	.flex-container{
 		display: flex;
     flex-direction: row;
@@ -201,7 +368,7 @@ h2 {
   h1 {
     font-size: 28px;
     font-weight: 700;
-    line-height: 36px;
+    /* line-height: 36px; */
     color: #333;
   }
 
@@ -212,27 +379,28 @@ h2 {
     color: #333;
   } 
 
-  .footer {
-    position: fixed;
-    bottom: 0;
-    left:0;
-    right:0;
-    width: 100%;
-    height: 40px;
-    background-color: #7a42f4;
-    color: #fff;
-    font-size: 14px;
-    text-align: center;
-    line-height: 20px;
-    padding-top: 4px;
-    padding-bottom: 8px;
-  }
+
+  /* Bottom right text */
+.text-block {
+  position: absolute;
+  top: 80px;
+  right: 0px;
+  background-color: white;
+  opacity: 0.8;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* margin-left: 10px; */
+}
+.text-block h1 {
+  font-size: 20px;
+  line-height: 30px;
+  color: #333;
+  
+}
 }
 
 @media screen and (min-width:1200px) {
-	body{
 	
-	}
 	.flex-container{
 		display: flex;
     flex-direction: row;
@@ -277,7 +445,7 @@ h2 {
   h1 {
     font-size: 30px;
     font-weight: 700;
-    line-height: 40px;
+    /* line-height: 40px; */
     color: #333;
   }
 
@@ -288,21 +456,25 @@ h2 {
     color: #333;
   } 
 
-  .footer {
-    position: fixed;
-    bottom: 0;
-    left:0;
-    right:0;
-    width: 100%;
-    height: 40px;
-    background-color: #7a42f4;
-    color: #fff;
-    font-size: 14px;
-    text-align: center;
-    line-height: 20px;
-    padding-top: 4px;
-    padding-bottom: 8px;
-  }
+
+
+  /* Bottom right text */
+.text-block {
+  position: absolute;
+  top: 80px;
+  right: 0px;
+  background-color: white;
+  opacity: 0.8;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* margin-left: 10px; */
+}
+.text-block h1 {
+  font-size: 20px;
+  line-height: 30px;
+  color: #333;
+  
+}
   
 }
 
@@ -333,4 +505,63 @@ h2 {
 
 .button_resume:hover {
   background-color: #666;
+}
+
+fieldset {
+  padding: 0; 
+  display: block;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em;
+  min-inline-size: min-content;
+  border-width: 2px;
+  border-style: groove;
+  border-color: #999;
+  /* border-image: initial; */
+}
+
+
+legend {
+  padding: 0.2em 0.5em;
+  border:2px solid #333;
+  color:#333;
+  font-size:20px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align:left;
+  margin: 0 0 20px;
+  }
+
+label {
+  line-height: 30px;
+  font-size: 14px;
+  float: left;
+  width: 10%;
+  margin-right: 0.5em;
+  padding-top: 0.2em;
+  text-align: right;
+  font-weight: bold;
+}
+input {
+  line-height: 24px;
+
+}
+
+
+.send {
+  width: 10%;
+  font-size: 16px;
+  margin-left: 10.5%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border:2px solid #7a42f4;
+  color:#7a42f4;
+  font-size:20px;
+  font-weight: light;
+  line-height: 24px;
+  text-align: center;
+  
 }
