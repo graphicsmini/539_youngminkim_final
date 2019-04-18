@@ -14,7 +14,7 @@
   <body>
     <header>
       <nav class="topnav" id="myTopnav">
-        <a href = "index.html">Home</a>
+        <a href = "index.html">Youngmin Kim</a>
         <a href = "about.html">About</a>
         <a href = "experience.html">Experience</a>
         <a href = "portfolio.html">Works</a>
@@ -33,33 +33,44 @@
             x.className = "topnav";
           }
         }
+        
     </script>
 
     <main>
-      <div class="row">
-        <div class="column_left"><h1>
-        Youngmin Kim<br><br>
-        youngmnk@umich.edu<br>
-        734 . 800 . 6767 </h1>
-        </div>
-
-        <div class="column_right">
-          <div class="column_left"><br><br>
-            <h1><a href = "https://www.linkedin.com/in/youngminkimme/"><i class="fab fa-linkedin"></i><br>LinkedIn</a></h1> 
-          </div>
-          <div class="column_right"><br><br>
-            <h1><a href = "https://kimyoungmin.me"><i class="fas fa-heart"></i><br>Portfolio</a></h1>
-          </div>
-        </div>
+      <div> 
+        <h1>Do you want to know more about me and my work?</h1>
+        <h1>Please fill out the form below. I will reach out to you soon! </h1><br>
       </div>
+
+      <form method = "POST" action="https://formspree.io/youngmnk@umich.edu">
+        <fieldset> 
+          <legend>Send me message: </legend>
+          <label for="name">Name: </label><br>
+          <input type="text" id = "name" placeholder="Youngmin Kim"><br>
+          <br>
+          <label>Your email: </label><br>
+          <input type="email" placeholder = "abc@umich.edu"><br>
+          <br>
+          <label>Message: </label><br>
+          <textarea name="message" rows="6" cols=auto placeholder = "Hello, Youngmin!"></textarea>
+          <br><br>
+          <button class="send" type = "submit" value = "Send">Send</button>
+        </fieldset>
+      </form>
     </main>
     
+
     <footer>
-      <div class="footer">
-        © 2019 Youngmin Kim. All Rights Reserved.
-        <br><i class="fab fa-dribbble"></i>
-      </div>
-    </footer>
+        <div class="content">
+          <div class="name">YOUNGMIN<span class="lite">KIM</span></div>
+          <div class="email">youngmnk@umich.edu</div>
+          <div class="copyright">© 2019 Youngmin Kim. All Rights Reserved.</div>
+          <div class="img-list">
+            <a href="https://www.linkedin.com/in/youngminkimme/" target="_blank"><img src="images/linkedin.svg"></a>
+            <a href="https://kimyoungmin.me" target="_blank"><img src="images/dribbble.svg" height="37px"></a>
+          </div>
+        </div>
+      </footer>
 
   </body>
 </html>
