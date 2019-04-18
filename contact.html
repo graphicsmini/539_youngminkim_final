@@ -57,6 +57,16 @@
           <button class="send" type = "submit" value = "Send">Send</button>
         </fieldset>
       </form>
+
+      <div class="sunsetvideo">
+          <button onclick="playPause()"><h2> Click here to see the beautiful sunset!</h2></button>
+          <br><br>
+          <video id="video">
+            <source src="sunset.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+      </div>
+  
     </main>
     
 
@@ -71,6 +81,16 @@
           </div>
         </div>
       </footer>
+      
+      <script>
+            var myVideo = document.getElementById("video");
+      function playPause() {
+        if (myVideo.paused)
+          myVideo.play();
+        else
+          myVideo.pause();
+        }
 
+      </script>
   </body>
 </html>
