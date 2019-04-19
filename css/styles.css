@@ -200,8 +200,8 @@ footer {
   margin-top: 30px;
 }
 
-.lite {
-  opacity: 0.3;
+footer .content .lite {
+  opacity: 0.5;
 }
 
 
@@ -240,6 +240,12 @@ footer .content .copyright {
 
 .img-list {
   display: block;
+}
+
+.img-list a {
+  font-size: 10px;
+  color:#999;
+  text-decoration: none;
 }
 
 .img-list > * {
