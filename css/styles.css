@@ -234,7 +234,7 @@ footer .content .email {
 footer .content .copyright {
   font-size: 12px;
   line-height: 24px;
-  color: #888;
+  color: #555;
   font-style: italic;
 }
 
@@ -244,7 +244,7 @@ footer .content .copyright {
 
 .img-list a {
   font-size: 10px;
-  color:#999;
+  color:#333;
   text-decoration: none;
 }
 
